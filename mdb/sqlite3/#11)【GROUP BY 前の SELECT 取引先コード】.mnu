@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 1) 取引先コード( 得意先 )
+-- ***********************************************
+
+SELECT
+--  distinct 取引先コード
+    取引先コード
+FROM
+    [ODBC;DSN=S3-LIGHTBOX;Database=C:\app\workspace\lightbox.sqlite3].取引データ
+
+-- ORDER BY 取引先コード
