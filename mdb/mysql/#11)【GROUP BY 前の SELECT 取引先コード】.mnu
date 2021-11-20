@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 1) 取引先コード( 得意先 )
+-- ***********************************************
+
+SELECT
+--  distinct 取引先コード
+    取引先コード
+FROM
+    [ODBC;Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=lightbox;Uid=root;Pwd=;Charset=cp932].取引データ
+
+-- ORDER BY 取引先コード

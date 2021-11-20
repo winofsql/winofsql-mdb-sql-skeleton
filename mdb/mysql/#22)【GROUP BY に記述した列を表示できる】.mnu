@@ -1,0 +1,11 @@
+@SKELETON
+-- ***********************************************
+-- 2) GROUP BY に記述した列を表示できる
+-- ***********************************************
+
+SELECT
+    取引先コード
+FROM
+    [ODBC;Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=lightbox;Uid=root;Pwd=;Charset=cp932].取引データ
+GROUP BY
+    取引先コード

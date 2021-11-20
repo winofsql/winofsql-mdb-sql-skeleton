@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 4) カンマ編集
+-- ***********************************************
+
+SELECT
+    取引先コード,
+    format(sum(金額), '#,##0') AS 売上金額
+FROM
+    [ODBC;Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=lightbox;Uid=root;Pwd=;Charset=cp932].取引データ
+GROUP BY
+    取引先コード

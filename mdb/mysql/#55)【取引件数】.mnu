@@ -1,0 +1,13 @@
+@SKELETON
+-- ***********************************************
+-- 5) 取引件数
+-- ***********************************************
+
+SELECT
+    取引先コード,
+    format(sum(金額), '#,##0') AS 売上金額,
+    count(取引先コード) AS 売上伝票行数
+FROM
+    [ODBC;Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=lightbox;Uid=root;Pwd=;Charset=cp932].取引データ
+GROUP BY
+    取引先コード
