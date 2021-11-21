@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 4) カンマ編集
+-- ***********************************************
+
+SELECT
+    取引先コード,
+    format(sum(金額), '#,##0') AS 売上金額
+FROM
+    OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.mdb')...取引データ
+GROUP BY
+    取引先コード

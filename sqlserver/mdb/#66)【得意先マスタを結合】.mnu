@@ -1,0 +1,17 @@
+@SKELETON
+-- ***********************************************
+-- 6) 得意先マスタを結合
+-- テーブル名で列名を修飾する場合
+-- 別名を定義しておきます
+-- ***********************************************
+
+SELECT
+    取引先コード,
+    format(sum(金額), '#,##0') AS 売上金額,
+    count(取引先コード) AS 売上伝票行数
+FROM
+    OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.mdb')...取引データ 取引データ
+    LEFT OUTER JOIN OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.mdb')...得意先マスタ 得意先マスタ
+    ON 取引データ.取引先コード = 得意先マスタ.得意先コード
+GROUP BY
+    取引先コード

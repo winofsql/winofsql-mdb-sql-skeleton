@@ -1,0 +1,11 @@
+@SKELETON
+-- ***********************************************
+-- 2) GROUP BY に記述した列を表示できる
+-- ***********************************************
+
+SELECT
+    取引先コード
+FROM
+    OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.mdb')...取引データ
+GROUP BY
+    取引先コード
