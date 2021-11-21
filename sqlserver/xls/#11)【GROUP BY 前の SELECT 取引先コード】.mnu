@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 1) 取引先コード( 得意先 )
+-- ***********************************************
+
+SELECT
+--  distinct 取引先コード
+    取引先コード
+FROM
+    OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.xls;Extended properties=Excel 12.0')...取引データ
+
+-- ORDER BY 取引先コード
