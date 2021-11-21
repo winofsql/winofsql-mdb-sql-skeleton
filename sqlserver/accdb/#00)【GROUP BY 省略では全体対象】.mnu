@@ -1,0 +1,12 @@
+@SKELETON
+-- ***********************************************
+-- 0) GROUP BY 省略では全体対象
+-- ***********************************************
+
+SELECT
+    sum(金額) AS 合計金額,
+    count(*) AS 全体件数,
+    max(金額) AS 最大金額,
+    min(金額) AS 最小金額
+FROM
+    OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0','Data Source=C:\app\workspace\販売管理.accdb')...取引データ
